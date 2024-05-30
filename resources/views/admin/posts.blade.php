@@ -17,6 +17,14 @@
                 <td>{{$post->title}}</td>
                 <td>{{$post->slug}}</td>
                 <td>{{$post->content}}</td>
+                <td> 
+                <form  action="{{ route('admin.posts.destroy', $post->id) }}"  method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="Rimuovi" class="btn btn-danger">
+                </form></td>
+                
+               
             </tr>
         @endforeach
     </tbody>
