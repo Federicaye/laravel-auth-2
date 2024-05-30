@@ -23,8 +23,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    //Route::resource('comics', ComicController::class);
+   
 });
+
+require __DIR__ . '/auth.php';
 
 
 Route::middleware('auth')->group(function () {
@@ -32,8 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-require __DIR__ . '/auth.php';
 
 Route::fallback(function () {
     return redirect()->route('admin.dashboard');
