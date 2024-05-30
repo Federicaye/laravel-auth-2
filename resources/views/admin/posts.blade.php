@@ -23,6 +23,7 @@
                     @method('DELETE')
                     <input type="submit" value="Rimuovi" class="btn btn-danger">
                 </form></td>
+                <td> <a href="{{route('admin.posts.edit', $post->id )}}" class="btn btn-primary">Modifica</a></td>
                 
                
             </tr>
