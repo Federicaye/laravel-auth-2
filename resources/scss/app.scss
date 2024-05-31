@@ -12,3 +12,13 @@ $fa-font-path: "../fonts/webfonts" !default;
 h1 {
     color: $text-color;
 }
+
+.display-none {
+
+    display: none;
+}
+
+.edit-post {
+    width: 100%;
+    min-height: 50px;
+}
