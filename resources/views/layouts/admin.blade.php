@@ -21,8 +21,9 @@
 
 <body>
     <div id="admin">
-        <div id="sidebar">perche</div>
+       @include('partials.sidebar')
         <div id="wrapper">
+            <header>ciao</header>
             <main class="">
                 @yield('content')
             </main>
