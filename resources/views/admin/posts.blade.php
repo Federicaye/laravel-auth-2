@@ -7,6 +7,9 @@
             <th>title</th>
             <th>slug</th>
             <th>content</th>
+            <th>save</th>
+            <th>edit</th>
+            <th>cancel</th>
 
         </tr>
     </thead>
@@ -22,6 +25,9 @@
                     <td><p class="td {{$post->id}}">{{$post->content}}</p> <input type="text" name="content" class="display-none edit-post {{$post->id}}" name='content' value="{{ old('content', $post->content) }}" required maxlength="255"> </td>
                     <td><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i></button></td>
                 </form>
+               
+                <td> <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-primary edit-post-button" id="{{$post->id}}"><i class="fa-solid fa-pencil"></i></a></td>
+               
                 <td>
                     <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST">
                         @csrf
@@ -29,9 +35,6 @@
                         <input type="submit" value="Rimuovi" class="btn btn-danger">
                     </form>
                 </td>
-                <td> <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-primary edit-post-button" id="{{$post->id}}"><i class="fa-solid fa-pencil"></i></a></td>
-               
-
 
             </tr>
         @endforeach
