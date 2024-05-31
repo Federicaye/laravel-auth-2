@@ -22,3 +22,15 @@ h1 {
     width: 100%;
     min-height: 50px;
 }
+
+#admin {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+ #wrapper {
+    background-color: rgb(176, 214, 226) ;
+ }
+    #sidebar {
+        background-color: rgb(31, 84, 102);
+    }
+}
