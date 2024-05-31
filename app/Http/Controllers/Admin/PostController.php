@@ -56,8 +56,12 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        
-      return view("admin.posts", compact("post"));
+        $form_data = $request->all();
+        $post->update($form_data);
+        $post->title = $form_data['title'];
+        $post->slug = $form_data['slug'];
+        $post->content = $form_data['content'];
+      return redirect()->route("admin.posts.index");
         
     }
 
