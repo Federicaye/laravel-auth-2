@@ -17,9 +17,9 @@
                 <form action="{{route('admin.posts.update', $post->id)}}" method="POST">
                     @csrf
                     @method('PUT')
-                    <td>{{$post->title}} <input type="text" id="" class="display-none edit-post {{$post->id}}" name='title' value="{{ old('title', $post->title) }}" required maxlength="255"> </td>
-                    <td>{{$post->slug}} <input type="text" id="" class="display-none edit-post {{$post->id}}" name='slug' value="{{ old('slug', $post->slug) }}" required maxlength="255"> </td>
-                    <td>{{$post->content}} <input type="text" id="" class="display-none edit-post {{$post->id}}" name='content' value="{{ old('content', $post->content) }}" required maxlength="255"> </td>
+                    <td><p class="td {{$post->id}}">{{$post->title}} </p><input type="text" id="" class="display-none edit-post {{$post->id}}" name='title' value="{{ old('title', $post->title) }}" required maxlength="255"> </td>
+                    <td><p class="td {{$post->id}}">{{$post->slug}}</p> <input type="text" id="" class="display-none edit-post {{$post->id}}" name='slug' value="{{ old('slug', $post->slug) }}" required maxlength="255"> </td>
+                    <td><p class="td {{$post->id}}">{{$post->content}}</p> <input type="text" id="" class="display-none edit-post {{$post->id}}" name='content' value="{{ old('content', $post->content) }}" required maxlength="255"> </td>
                 </form>
                 <td>
                     <form action="{{ route('admin.posts.destroy', $post->id) }}" method="POST">
