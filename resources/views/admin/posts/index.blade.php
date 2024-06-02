@@ -2,6 +2,7 @@
 
 @section('content')
 <div>
+<button class="btn btn-primary" id="create-button"><i class="fa-solid fa-plus"></i></button>
     <table>
         <thead>
             <tr>
@@ -53,22 +54,24 @@
 
                 </tr>
             @endforeach
-            <tr id="new-post"></tr>
             <tr>
-                <td><button class="btn btn-primary" id="create-button"><i class="fa-solid fa-plus"></i></button></td>
-
+                
+            
             </tr>
-            <tr>
-                <form action="{{route('admin.posts.store')}}" method="POST"> <input type="hidden" name="_token"
-                        value="DMPSXwuOHhV5k90JX016YDfP8Y0Tf4m8BiURCGAb" autocomplete="off">
+            <tr id="new-post">
+                
+                <form action="{{route('admin.posts.store')}}" method="POST"> @csrf
 
 
-                    <td><input type="text" name="title" class="edit-post" required></td>
+                    <td ><input type="text" name="title" class="edit-post" required></td>
                     <td><input type="text" name="slug" class="edit-post" required></td>
-                    <td><input type="text" name="content" class="edit-post" required></td>
-                    <td><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i>
-                    <td>
+                    <td ><input type="text" name="content" class="edit-post" required></td>
+                    <td ><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i>
+                    
+                    
                 </form>
+                
+                <td></td>
             </tr>
         </tbody>
     </table>

@@ -33,18 +33,12 @@ editPostButton.forEach(function (editButton) {
     })
 })
 
-let token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');;
+
 let createButton = document.getElementById('create-button');
 let newPost = document.getElementById('new-post');
 createButton.addEventListener('click', () => {
-    newPost.innerHTML =
-        `<form action="{{route('admin.posts.store')}}" method="POST"> <input type="hidden" name="_token" value="${token}" autocomplete="off"> 
-  
-        <td><input type="text" name="title" class="edit-post" required></td>
-        <td><input type="text" name="slug" class="edit-post" required></td>
-        <td><input type="text" name="content" class="edit-post" required></td>
-        <td><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i><td>
-        </form>`;
+   
+        newPost.classList.toggle('d-none')
     console.log('ciao');
-
-})
+    })
+    
