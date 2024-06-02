@@ -22,7 +22,7 @@
 <body>
     <div id="admin">
        @include('partials.sidebar')
-        <div id="wrapper">
+        <div id="wrapper" class="w-100">
            
             <main class="">
             @include('partials.header')

@@ -32,7 +32,9 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+        $newPost = Post::create($form_data);
+        return redirect()->route('admin.posts.index');
     }
 
     /**
