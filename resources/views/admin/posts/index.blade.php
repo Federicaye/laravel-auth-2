@@ -58,14 +58,14 @@
                 
             
             </tr>
-            <tr id="new-post">
+            <tr id="new-post" class="d-none">
                 
                 <form action="{{route('admin.posts.store')}}" method="POST"> @csrf
 
 
-                    <td ><input type="text" name="title" class="edit-post" required></td>
-                    <td><input type="text" name="slug" class="edit-post" required></td>
-                    <td ><input type="text" name="content" class="edit-post" required></td>
+                    <td ><input type="text" name="title" class="edit-post" required value="title"></td>
+                    <td><input type="text" name="slug" class="edit-post" required value="slug"></td>
+                    <td ><input type="text" name="content" class="edit-post" required value="content"></td>
                     <td ><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i>
                     
                     
