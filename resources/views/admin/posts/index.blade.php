@@ -2,9 +2,17 @@
 
 @section('content')
 <div>
-<button class="btn btn-primary" id="create-button"><i class="fa-solid fa-plus"></i></button>
+
     <table>
         <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th><button class="btn btn-primary" id="create-button"><i class="fa-solid fa-plus"></i></button></th>
+            </tr>
             <tr>
                 <th>title</th>
                 <th>slug</th>
